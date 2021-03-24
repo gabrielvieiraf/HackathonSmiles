@@ -1,0 +1,80 @@
+<body style="background-color:lightgrey">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 60%; margin: 4% 20%;">
+        {{#each erros}}
+        <div class="alert alert-danger">{{texto}}</div>
+        {{else}}
+
+        {{/each}}
+        <h2>Cadastro</h2><br>
+        <form action="/cadastro" method="POST">
+            <div class="container">
+                <h3>Dados pessoais</h3>
+                <div class="row">
+                    <div class="col-sm" style="width: 40%;">
+                        <label class="form-label">Nome*:</label>
+                        <input class="form-control" type="text" name="nome" required>
+                    </div>
+                    <div class="col-sm" style="width: 40%;">
+                        <label class="form-label">Email*:</label>
+                        <input class="form-control" type="text" name="email" required>
+                    </div>
+                    <div class="col-sm" style="width: 20%;">
+                        <label class="form-label">Nascimento:</label>
+                        <input class="form-control" type="text" name="nascimento">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Endereço:</label>
+                        <input class="form-control" type="text" name="endereco">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Cidade:</label>
+                        <input class="form-control" type="text" name="cidade">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Estado:</label>
+                        <input class="form-control" type="text" name="estado">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">País:</label>
+                        <input class="form-control" type="text" name="pais">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Telefone:</label>
+                        <input class="form-control" type="text" name="telefone">
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="container">
+                <h3>Dados de usuário</h3>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Usuário*:</label>
+                        <input class="form-control" type="text" name="usuario" required>
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Defina uma Senha*:</label>
+                        <input class="form-control" type="password" name="senha1" required>
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Confirmar senha*:</label>
+                        <input class="form-control" type="password" name="senha2" required>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" style="width: 100%;" class="btn-smiles mt-4">Criar conta</button>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p>Já tem uma conta? </p>
+                    <a href="http://localhost:8080/login"> Clique aqui para logar</a>
+                 
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,28 @@
+<body style="background-color:lightgrey">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 24%; margin: 6% 38%;">
+        <div class="text-center">
+            <h3>Login</h2>
+                <p>Informe suas credenciais nos campos abaixo.</p>
+        </div>
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input class="form-control" type="text" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Senha:</label>
+                <input class="form-control" type="password" name="senha" required>
+            </div>
+            <div>
+                <a href="http://localhost:8080/senha">Esqueci minha senha</a>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" style="width: 100%;" class="btn-smiles mt-4">Logar</button>
+            </div>
+        </form><br>
+        <div class="text-center">
+            <p>Não tem uma conta? </p>
+            <a href="http://localhost:8080/cadastro"> Clique aqui para criar uma</a>
+        </div>
+    </div>
+</body>

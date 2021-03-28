@@ -1,0 +1,73 @@
+<body style="background-color:lightgrey">
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 60%; margin: 4% 20%;">
+        <h2>Perfil</h2><br>
+        <form action="/update" method="POST">
+            <div class="container">
+
+            </div>
+            {{#each dados3}}
+            <input type="hidden" name="id" value="{{_id}}">
+            <div class="container">
+                <h3>Dados pessoais</h3>
+                <div class="row">
+                    <div class="col-sm" style="width: 40%;">
+                        <label class="form-label">Nome*:</label>
+                        <input class="form-control" type="text" name="nome" value="{{nome}}" required>
+                    </div>
+                    <div class="col-sm" style="width: 40%;">
+                        <label class="form-label">Email*:</label>
+                        <input class="form-control" type="text" name="email" value="{{email}}" required>
+                    </div>
+                    <div class="col-sm" style="width: 20%;">
+                        <label class="form-label">Nascimento:</label>
+                        <input class="form-control" type="text" name="nascimento" value="{{nascimento}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Endereço:</label>
+                        <input class="form-control" type="text" name="endereco" value="{{endereco}}">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Cidade:</label>
+                        <input class="form-control" type="text" name="cidade" value="{{cidade}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Estado:</label>
+                        <input class="form-control" type="text" name="estado" value="{{estado}}">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">País:</label>
+                        <input class="form-control" type="text" name="pais" value="{{pais}}">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Telefone:</label>
+                        <input class="form-control" type="text" name="telefone" value="{{telefone}}">
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="container">
+                <h3>Dados de usuário</h3>
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-label">Usuário*:</label>
+                        <input class="form-control" type="text" name="usuario" value="{{usuario}}" required>
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Senha*:</label>
+                        <input class="form-control" type="password" name="senha" value="{{senha}}" required>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit"  style="width: 100%;" class="btn btn-primary mt-4">Atualizar</button>
+                </div>
+            </div>
+            {{/each}}
+
+        </form>
+    </div>
+</body>

@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card-body">
+
+        <h2>Read by name</h2><br>
+        <form action="/search" method="POST">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Inserir nome" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2" name="nome">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+        </form><br>
+        <form action="/search" method="GET"></form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nascimento</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">País</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each dados2}}
+                <tr>
+                    <th scope="row">{{_id}}</th>
+                    <td>{{nome}}</td>
+                    <td>{{email}}</td>
+                    <td>{{nascimento}}</td>
+                    <td>{{cidade}}</td>
+                    <td>{{estado}}</td>
+                    <td>{{pais}}</td>
+                    <td>{{telefone}}</td>
+                    <td>
+                        <a href="http://localhost:8080/update/{{_id}}">
+                            <button type="button" class="btn btn-warning">Editar</button>
+                        </a>
+                        <a href="http://localhost:8080/delete/{{_id}}">
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        </form>
+
+    </div>
+</div>
